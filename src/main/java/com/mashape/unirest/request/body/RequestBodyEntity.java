@@ -34,6 +34,7 @@ import com.mashape.unirest.request.HttpRequest;
 
 public class RequestBodyEntity extends BaseRequest implements Body {
 
+
 	private Object body;
 
 	public RequestBodyEntity(HttpRequest httpRequest) {
@@ -58,4 +59,9 @@ public class RequestBodyEntity extends BaseRequest implements Body {
 		return new StringEntity(body.toString(), UTF_8);
 	}
 
+	@Override
+	public String toString()
+	{
+		return "RequestBodyEntity{" + "body=" + body + ", httpRequest=" + httpRequest + '}';
+	}
 }
